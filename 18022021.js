@@ -85,16 +85,16 @@ let table = document.createElement('table');
 document.body.append(table);
 
 let tr = document.createElement('tr');
-let tdId = document.createElement('th');
+let tdID = document.createElement('th');
 let tdName = document.createElement('th');
 let tdAge = document.createElement('th');
 let tdWealth = document.createElement('th');
 
-tdId.innerText = "Id";
+tdID.innerText = "ID";
 tdName.innerText = "Name";
 tdWealth.innerText = "Wealth";
 tdAge.innerText = "Age";
-tr.append(tdId);
+tr.append(tdID);
 tr.append(tdName);
 tr.append(tdAge);
 tr.append(tdWealth);
@@ -107,18 +107,18 @@ fetch("./data.json")
     })
     .then(function (data) {
         for (const key in data) {
-            let tdId = document.createElement('td');
+            let tdID = document.createElement('td');
             let tr = document.createElement('tr');
             let tdName = document.createElement('td');
             let tdAge = document.createElement('td');
             let tdWealth = document.createElement('td');
             
-            tdId.innerText = [key];
+            tdID.innerText = [key];
             tdName.innerText = data[key].name;
             tdWealth.innerText = "$" + data[key].wealth;
             tdAge.innerText = data[key].age; 
 
-            tr.append(tdId);
+            tr.append(tdID);
             tr.append(tdName);
             tr.append(tdAge);
             tr.append(tdWealth);
